@@ -3,12 +3,8 @@ from itertools import permutations
 
 def largest_number_naive(numbers):
     final = ""
-    newNumbers = []
+    numbers.sort(reverse = True)
     for number in numbers:
-        newNumbers.append(list(number))
-    flattenedNewNumbers = sum(newNumbers, [])
-    flattenedNewNumbers.sort(reverse = True)
-    for number in flattenedNewNumbers:
         final += str(number)
     return int(final)
 
